@@ -13,4 +13,23 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require vegas
 //= require_tree .
+
+function backdrop() {
+
+$('body').vegas({
+  overlay: true,
+  transition: 'fade',
+  transitionDuration: 4000,
+  delay: 10000,
+  animation: 'random',
+  animationDuration: 20000,
+  slides: [
+    { src: 'http://s3-media3.fl.yelpcdn.com/bphoto/j1-Qfl8HtoGcqBUPUC6cQQ/o.jpg' },
+
+
+  ]
+});
+
+}
