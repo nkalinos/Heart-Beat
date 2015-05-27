@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150526214405) do
+ActiveRecord::Schema.define(version: 20150527195852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,24 @@ ActiveRecord::Schema.define(version: 20150526214405) do
     t.string  "name"
     t.string  "url"
     t.string  "allergen"
-    t.boolean "non_dairy", default: false
+    t.boolean "non_dairy",          default: false
+    t.string  "ingredients"
+    t.string  "calories"
+    t.string  "calories_from_fat"
+    t.string  "total_fat"
+    t.string  "saturated_fat"
+    t.string  "trans_fat"
+    t.string  "cholesterol"
+    t.string  "sodium"
+    t.string  "total_carbohydrate"
+    t.string  "dietry_fiber"
+    t.string  "sugar"
+    t.string  "sugar_alcohols"
+    t.string  "protein"
+    t.string  "vitamin_a"
+    t.string  "vitamin_c"
+    t.string  "calcium"
+    t.string  "iron"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,10 +1,12 @@
 <h1>Current Flavors :</h1>
 <div class='page-header'>
-  <div class="pull-right">
+  <div class="pull-left">
   </div>
+  <p>
 <%= button_to "Add New Flavor", new_flavor_path, class: "button", method: "get" %>
+</p>
 </div>
-<table class='table table-striped'>
+<table>
   <thead>
     <tr>
       <th> <%= "" %>  </th>
@@ -29,7 +31,14 @@
         <td>
           <%= flavor.non_dairy %>
         </td>
+        <td>
+          <%= link_to 'Edit', edit_flavor_path(flavor), class: "btn btn-info" %>
+        </td>
+        <td>
+          <%= link_to 'Delete', flavor, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+        </td>
       </tr>
+      <% end %>
     </tbody>
 </table>
-<% end %>

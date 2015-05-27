@@ -17,9 +17,31 @@ class FlavorsController <ApplicationController
     end
   end
 
+  def show
+    @flavor = Flavor.find(params[:id])
+  end
+
+  def edit
+    @flavor = Flavor.find(params[:id])
+  end
+
+  def update
+    @flavor = Flavor.find(params[:id])
+    if @flavor.update(flavor_params)
+    redirect_to flavors_path, notice: 'Flavor was successfully updated.'
+    else
+    render :edit
+    end
+  end
+
+  def destroy
+    @flavor = Flavor.find(params[:id])
+    @flavor.destroy
+    redirect_to flavors_path, notice: "Flavor successfully deleted."
+  end
 
   private
   def flavor_params
-    params.require(:flavor).permit(:name, :url, :allergen, :non_dairy)
+    params.require(:flavor).permit(:name, :url, :allergen, :non_dairy, :ingredients, :calories, :caolires_from_fat, :total_fat, :saturated_fat, :trans_fat, :cholesterol, :sodium, :total_carbohydrate, :dietry_fiber, :sugar, :sugar_alcohols, :protein, :vitamin_a, :vitamin_c, :calcium, :iron)
   end
 end

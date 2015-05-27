@@ -10,8 +10,6 @@
   <% if @user %>
           <li><%= image_tag @user.image, class: 'avatar' %></li>
           <% end %>
-
-<%= yield %>
-
+          <%= yield %>
 </body>
 </html>

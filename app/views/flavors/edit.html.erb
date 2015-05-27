@@ -1,7 +1,7 @@
 <div class='pull-left'>
-<h2>Add New Flavor:</h2>
+<h2>Edit Flavor:</h2>
 </div>
-<%= form_for Flavor.new do |f| %>
+<%= form_for @flavor do |f| %>
 <p>
 
 <%= f.label :url %>
@@ -21,7 +21,7 @@
 </p>
 <p>
 <%= f.label :ingredients %>
-<%= f.text_area :ingredients %>
+<%= f.text_area :non_dairy %>
 </p>
 <p>
 <%= f.label :calories %>

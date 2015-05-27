@@ -6,8 +6,20 @@ body {
   color: #4BD12A;
   background: #000;
 }
+table {
+  border: 1px white;
+}
+
 th {
-  color: yellow
+  color: yellow;
+  font-size: 1.5em;
+
+}
+.button {
+  color: #160FF2;
+}
+h4 {
+  color: red
 }
 
 h1, h2, strong {
