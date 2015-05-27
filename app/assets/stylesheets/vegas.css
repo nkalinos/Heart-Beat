@@ -6,18 +6,22 @@ body {
   color: #4BD12A;
   background: #000;
 }
+th {
+  color: yellow
+}
 
 h1, h2, strong {
   margin: 5px 0;
   padding: 0;
   margin-right: 130px;
   line-height: 1em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   text-shadow:
     -1px -1px 1px rgba(#000, .3),
      1px 1px 1px rgba(#000, .3),
      0 0 10px #000;
+     color: red;
 }
 
 h1 {

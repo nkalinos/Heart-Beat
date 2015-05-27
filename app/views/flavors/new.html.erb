@@ -1,0 +1,25 @@
+<div class='pull-left'>
+<h2>Add New Flavor:</h2>
+</div>
+<%= form_for Flavor.new do |f| %>
+<p>
+
+<%= f.label :url %>
+<%= f.text_field :url %>
+</p>
+<p>
+<%= f.label :name %>
+<%= f.text_field :name %>
+</p>
+<p>
+<%= f.label :allergen %>
+<%= f.text_field :allergen %>
+</p>
+<p>
+<%= f.label :non_dairy %>
+<%= f.check_box :non_dairy %>
+</p>
+<p>
+<%= f.submit %>
+</p>
+<% end %>

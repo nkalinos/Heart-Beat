@@ -1,0 +1,35 @@
+<h1>Current Flavors :</h1>
+<div class='page-header'>
+  <div class="pull-right">
+  </div>
+<%= button_to "Add New Flavor", new_flavor_path, class: "button", method: "get" %>
+</div>
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th> <%= "" %>  </th>
+      <th>Flavor</th>
+      <th>Allergen(s)</th>
+      <th>Non Dairy?</th>
+    </tr>
+  </thead>
+
+    <tbody>
+      <% @flavors.each do |flavor| %>
+      <tr>
+        <td>
+        <%= flavor.url %>
+        </td>
+        <td>
+          <%= link_to flavor.name, flavor_path(flavor) %>
+        </td>
+        <td>
+          <%= flavor.allergen %>
+        </td>
+        <td>
+          <%= flavor.non_dairy %>
+        </td>
+      </tr>
+    </tbody>
+</table>
+<% end %>
