@@ -1,5 +1,5 @@
 class FlavorsController <ApplicationController
-
+http_basic_authenticate_with name: "nkalinos", password: "foo", except: :index
   def index
     @flavors = Flavor.all
   end
