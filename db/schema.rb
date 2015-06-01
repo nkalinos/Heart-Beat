@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150527221135) do
+ActiveRecord::Schema.define(version: 20150601193727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,12 @@ ActiveRecord::Schema.define(version: 20150527221135) do
   create_table "allergens_flavors", force: :cascade do |t|
     t.integer "flavor_id"
     t.integer "allergen_id"
+  end
+
+  create_table "emails", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
   end
 
   create_table "flavors", force: :cascade do |t|
@@ -39,7 +45,7 @@ ActiveRecord::Schema.define(version: 20150527221135) do
     t.string  "cholesterol"
     t.string  "sodium"
     t.string  "total_carbohydrate"
-    t.string  "dietry_fiber"
+    t.string  "dietary_fiber"
     t.string  "sugar"
     t.string  "sugar_alcohols"
     t.string  "protein"

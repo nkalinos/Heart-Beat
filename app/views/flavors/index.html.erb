@@ -1,4 +1,4 @@
-<h1>Current Flavors :</h1>
+<h2>Current Flavors :</h2>
 <div class='page-header'>
   <div class="pull-left">
   </div>
@@ -6,7 +6,7 @@
 <%= button_to "Add New Flavor", new_flavor_path, class: "button", method: "get" %>
 </p>
 </div>
-<table>
+<table border='1'>
   <thead>
     <tr>
       <th> <%= "" %>  </th>
@@ -20,7 +20,7 @@
       <% @flavors.each do |flavor| %>
       <tr>
         <td>
-        <%= flavor.url %>
+          <img src="<%= flavor.url %>">
         </td>
         <td>
           <%= link_to flavor.name, flavor_path(flavor) %>
@@ -31,13 +31,7 @@
         <td>
           <%= flavor.non_dairy %>
         </td>
-        <td>
-          <%= link_to 'Edit', edit_flavor_path(flavor), class: "btn btn-info" %>
-        </td>
-        <td>
-          <%= link_to 'Delete', flavor, method: :delete, data: { confirm: 'Are you sure?' } %>
 
-        </td>
       </tr>
       <% end %>
     </tbody>

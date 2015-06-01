@@ -1,16 +1,139 @@
 <h2> <%= @flavor.name %></h2>
 
-<h3>Nutrition Information:</h3>
 
 <img src="<%= @flavor.url %>">
+<h3>Nutrition Information:</h3>
+  <h4>Ingredients</h4>
+<h5> <%= @flavor.ingredients-%></h5>
 
-<h4>Ingredients-</h4> <%= @flavor.ingredients %>
-
-
-<table>
+<table border="1">
   <thead>
     <th>
-      
+      Calories
+    </th>
+    <th>
+      Calories from Fat
+    </th>
+    <th>
+      Total Fat (g)
+    </th>
+    <th>
+      Saturated Fat (g)
+    </th>
+    <th>
+      Trans Fat (g)
+    </th>
+    <th>
+      Cholesterol (mg)
+    </th>
+    <th>
+      Sodium (mg)
+    </th>
+    <th>
+      Total carbohydrate (g)
     </th>
   </thead>
+  <tbody>
+    <tr>
+      <td>
+        <%= @flavor.calories %>
+      </td>
+
+      <td>
+        <%= @flavor.calories_from_fat %>
+      </td>
+
+      <td>
+        <%= @flavor.total_fat %>
+      </td>
+
+      <td>
+        <%= @flavor.saturated_fat %>
+      </td>
+
+      <td>
+        <%= @flavor.trans_fat %>
+      </td>
+
+      <td>
+        <%= @flavor.cholesterol %>
+      </td>
+
+      <td>
+        <%= @flavor.sodium %>
+      </td>
+
+      <td>
+        <%= @flavor.total_carbohydrate %>
+      </td>
+
+    </tr>
+  </tbody>
+
+</table>
+
+<table border="1">
+  <thead>
+    <th>
+      Dietary Fiber (g)
+    </th>
+    <th>
+      Sugar (g)
+    </th>
+    <th>
+      Sugar Alcohols (g)
+    </th>
+    <th>
+      Protein (g)
+    </th>
+    <th>
+      Vitamin A (%DV)
+    </th>
+    <th>
+      Vitamin C (%DV)
+    </th>
+    <th>
+      Calcium
+    </th>
+    <th>
+      Iron (%DV)
+    </th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <%= @flavor.dietary_fiber %>
+      </td>
+
+      <td>
+        <%= @flavor.sugar %>
+      </td>
+
+      <td>
+        <%= @flavor.sugar_alcohols %>
+      </td>
+
+      <td>
+        <%= @flavor.protein %>
+      </td>
+
+      <td>
+        <%= @flavor.vitamin_a %>
+      </td>
+
+      <td>
+        <%= @flavor.vitamin_c %>
+      </td>
+
+      <td>
+        <%= @flavor.calcium %>
+      </td>
+
+      <td>
+        <%= @flavor.iron %>
+      </td>
+
+    </tr>
+  </tbody>
+
 </table>

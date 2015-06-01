@@ -42,6 +42,6 @@ http_basic_authenticate_with name: "nkalinos", password: "foo", except: :index
 
   private
   def flavor_params
-    params.require(:flavor).permit(:name, :url, :allergen, :non_dairy, :ingredients, :calories, :caolires_from_fat, :total_fat, :saturated_fat, :trans_fat, :cholesterol, :sodium, :total_carbohydrate, :dietry_fiber, :sugar, :sugar_alcohols, :protein, :vitamin_a, :vitamin_c, :calcium, :iron)
+    params.require(:flavor).permit(:name, :url, :allergen, :non_dairy, :ingredients, :calories, :caolires_from_fat, :total_fat, :saturated_fat, :trans_fat, :cholesterol, :sodium, :total_carbohydrate, :dietary_fiber, :sugar, :sugar_alcohols, :protein, :vitamin_a, :vitamin_c, :calcium, :iron)
   end
 end
