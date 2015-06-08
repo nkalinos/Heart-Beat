@@ -7,32 +7,23 @@
 </p>
 </div>
 <table border='1'>
-  <thead>
-    <tr>
-      <th> <%= "" %>  </th>
-      <th>Flavor</th>
-      <th>Allergen(s)</th>
-      <th>Non Dairy?</th>
-    </tr>
-  </thead>
+
 
     <tbody>
       <% @flavors.each do |flavor| %>
-      <tr>
-        <td>
-          <img src="<%= flavor.url %>">
-        </td>
-        <td>
-          <%= link_to flavor.name, flavor_path(flavor) %>
-        </td>
-        <td>
-          <%= flavor.allergen %>
-        </td>
-        <td>
-          <%= flavor.non_dairy %>
-        </td>
 
-      </tr>
+      <ul class="grid cs-style-1">
+          <li>
+            <figure>
+            <img src="<%= flavor.url %>">
+            <figcaption>
+              <h3>Flavor:</h3>
+              <span> <%= flavor.name %> </span
+                <%= link_to "View Flavor" %>
+            </figcaption>
+          </figure>
+        </li>
       <% end %>
+
     </tbody>
 </table>
