@@ -98,11 +98,11 @@
 }
 
 .grid figcaption span:before {
-  content: 'by ';
+  content: '';
 }
 
 
-.grid figcaption p {
+.grid figcaption a {
   text-align: center;
   padding: 5px 10px;
   border-radius: 2px;

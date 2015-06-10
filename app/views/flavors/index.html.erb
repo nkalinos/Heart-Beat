@@ -10,7 +10,6 @@
       <ul class="grid cs-style-1">
         <% @flavors.each do |flavor| %>
           <li>
-            <h3><%= flavor.name %></h3>
 
             <figure>
             <img src="<%= flavor.url %>">
@@ -18,9 +17,10 @@
               <h3>Flavor:</h3>
               <span> <%= flavor.name %> </span>
 
-              <p> <%= link_to "View Flavor", flavor_path(flavor) %> > </p>
+               <%= link_to "View Flavor", flavor_path(flavor) %>
 
             </figcaption>
           </figure>
         </li>
         <% end %>
+      </ul>
