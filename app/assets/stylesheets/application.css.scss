@@ -20,16 +20,35 @@
 
 
  @import "bootswatch/spacelab/bootswatch";
+ .pos_left {
+    position: relative;
+    left: -10px;
+}
+
+.pos_right {
+    position: absolute;
+    left: 40%;
+    top: 115px;
+}
+
+ h3 {
+   color: #0DB523
+ }
+
+ .nick {
+   height: 90%;
+   width: 30%;
+ }
 
 .collapse {
-  background-color: #E88300;
+  background-color: white;
 }
 
 .navbar-brand {
-  background-color: #E88300;
+  background-color: white;
 }
 .container-fluid {
-  background-color: #E88300;
+  background-color: white;
 }
 
 .body {
@@ -78,8 +97,12 @@
   color: #fff;
 }
 
+.grid figcaption span:before {
+  content: 'by ';
+}
 
-.grid figcaption a {
+
+.grid figcaption p {
   text-align: center;
   padding: 5px 10px;
   border-radius: 2px;
@@ -95,17 +118,32 @@
   text-align: center;
   backface-visibility: hidden;
   transition: transform 0.3s, opacity 0.3s;
-  .no-touch .cs-style-1 figure:hover figcaption
-  .cs-style-1 figure.cs-hover figcaption {
-    opacity: 1;
-    transform: translate (15px, 15px);
-  }
+
 }
 
+.no-touch .cs-style-1 figure:hover figcaption,
+.cs-style-1 figure.cs-hover figcaption {
+  opacity: 1;
+  transform: translate (15px, 15px);
+}
+
+.cs-style-1 figcaption h3 {
+  margin-top: 70px;
+}
 .cs-style-1 figcaption span {
   display: block;
 }
 
 .cs-style-1 figcaption a {
   margin-top: 30px;
+}
+
+@media screen and (max-width: 31.5em) {
+  .grid {
+    padding: 10px 10px 100px 10px;
+  }
+  .grid li {
+    width: 100%;
+    min-width: 300px;
+  }
 }

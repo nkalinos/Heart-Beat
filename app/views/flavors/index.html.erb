@@ -6,24 +6,21 @@
 <%= button_to "Add New Flavor", new_flavor_path, class: "button", method: "get" %>
 </p>
 </div>
-<table border='1'>
-
-
-    <tbody>
-      <% @flavors.each do |flavor| %>
 
       <ul class="grid cs-style-1">
+        <% @flavors.each do |flavor| %>
           <li>
+            <h3><%= flavor.name %></h3>
+
             <figure>
             <img src="<%= flavor.url %>">
             <figcaption>
               <h3>Flavor:</h3>
-              <span> <%= flavor.name %> </span
-                <%= link_to "View Flavor" %>
+              <span> <%= flavor.name %> </span>
+
+              <p> <%= link_to "View Flavor", flavor_path(flavor) %> > </p>
+
             </figcaption>
           </figure>
         </li>
-      <% end %>
-
-    </tbody>
-</table>
+        <% end %>

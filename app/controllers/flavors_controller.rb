@@ -1,7 +1,8 @@
 class FlavorsController <ApplicationController
-http_basic_authenticate_with name: "nkalinos", password: "foo", except: :index
+http_basic_authenticate_with name: "nkalinos", password: "foo", except: [:index, :show]
   def index
     @flavors = Flavor.all
+    @flavor = Flavor.first
   end
 
   def new

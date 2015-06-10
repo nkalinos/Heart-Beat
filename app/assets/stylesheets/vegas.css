@@ -9,14 +9,14 @@ body {
   background: #000;
 }
 table {
-  border: 1px white;
+  border: 3px black;
 }
 td {
   color: #E06704;
   font-size: 1.3em;
 }
 th {
-  color: yellow;
+  color: green;
   font-size: 1.3em;
 
 }
@@ -41,7 +41,7 @@ h1, h2, strong {
      1px 1px 1px rgba(#000, .3),
      0 0 10px #000;
      color: red;
-     
+
 }
 
 h1 {

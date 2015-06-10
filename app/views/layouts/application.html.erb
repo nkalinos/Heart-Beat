@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HeartBeat</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>Yogurt Brothers</title>
+  <% if controller_name == "welcome" %>
+  <%= stylesheet_link_tag    'vegas', media: 'all', 'data-turbolinks-track' => true %>
+  <% else %>
+  <%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
+  <% end %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,6 +14,7 @@
 
           <nav class="navbar navbar-default">
   <div class="container-fluid">
+    <% unless controller_name =="welcome" %>
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -17,15 +22,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand"> <%= link_to 'Yogurt Brothers', dashboard_index_path %> </a>
+       <%= link_to image_tag 'tinyicon.png' %>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <% if action_name == "index" %>
       <ul class="nav navbar-nav">
         <li> <%= link_to 'Current Flavors', flavors_path %> </a></li>
         <li>  <%= link_to 'Email Signup', new_email_path %> </a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> About Us<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -37,7 +43,7 @@
           </ul>
         </li>
       </ul>
-
+      <% end %>
       <!-- <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
@@ -55,6 +61,7 @@
     </div>
   </div>
 </nav>
+<% end %>
           <%= yield %>
 
 </body>
