@@ -8,16 +8,18 @@ body {
   background: #000;
 }
 table {
-  border: 3px black;
+  border: 5px black;
+  
 }
 td {
   color: #E06704;
   font-size: 1.3em;
+  padding: 10px;
 }
 th {
   color: green;
   font-size: 1.3em;
-
+  padding: 10px;
 }
 .button {
   color: #160FF2;

@@ -20,15 +20,63 @@
 
 
  @import "bootswatch/spacelab/bootswatch";
+
+.info {
+  position: relative;
+  left: 50px;
+}
+
+
+.nya {
+  position: relative;
+  left: 550px;
+  top: -130px;
+}
+.works {
+  position: relative;
+  top: 40px;
+  left: 65px;
+}
+
+
+.pull-right {
+  position: relative;
+  top: -675px;
+  left: -100px;
+}
+
+.pos_middle {
+  position: relative;
+  left: -5%;
+}
+
  .pos_left {
     position: relative;
     left: -10px;
 }
 
+.img-profile2 {
+  width: 400px;
+  height: 250px;
+}
+.img-profile3 {
+  width: 250px;
+  height: 300px;
+}
+
+
+
 .pos_right {
     position: absolute;
     left: 40%;
-    top: 115px;
+    top: 90px;
+}
+
+td {
+  padding: 10px;
+}
+th {
+  padding: 5px;
 }
 
  h3 {
@@ -41,14 +89,20 @@
  }
 
 .collapse {
-  background-color: white;
+  background-color: #E38509;
+}
+ul.nav.navbar-nav {
+  color: white;
+}
+li {
+  color: white;
 }
 
 .navbar-brand {
-  background-color: white;
+  background-color: #E38509;
 }
 .container-fluid {
-  background-color: white;
+  background-color: #E38509;
 }
 
 .body {
@@ -139,6 +193,7 @@
 }
 
 @media screen and (max-width: 31.5em) {
+
   .grid {
     padding: 10px 10px 100px 10px;
   }

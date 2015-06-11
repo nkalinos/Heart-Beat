@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :dashboard
   resources :flavors
   resources :emails
+  resources :about
+  resources :info
   get '/auth/:provider/callback', to: 'sessions#create'
 
 end
